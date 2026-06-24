@@ -1,0 +1,62 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Public & Backend access rules for OYDEI Collections
+    match /programmes/{document} {
+      allow read, write: if true;
+    }
+    
+    match /programme_applications/{document} {
+      allow read, write: if true;
+    }
+    
+    match /scholarship_applications/{document} {
+      allow read, write: if true;
+    }
+    
+    match /counselling_bookings/{document} {
+      allow read, write: if true;
+    }
+    
+    match /contact_messages/{document} {
+      allow read, write: if true;
+    }
+    
+    match /newsletter_subscribers/{document} {
+      allow read, write: if true;
+    }
+    
+    match /blog_posts/{document} {
+      allow read, write: if true;
+    }
+    
+    match /gallery_items/{document} {
+      allow read, write: if true;
+    }
+    
+    match /partners/{document} {
+      allow read, write: if true;
+    }
+    
+    match /testimonials/{document} {
+      allow read, write: if true;
+    }
+    
+    match /donations/{document} {
+      allow read, write: if true;
+    }
+    
+    match /certificates/{document} {
+      allow read, write: if true;
+    }
+    
+    match /events/{document} {
+      allow read, write: if true;
+    }
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "entities": {
+    "Programme": {
+      "title": "Programme",
+      "description": "OYDEI operational programmes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "area": { "type": "string" },
+        "benefits": { "type": "array" },
+        "duration": { "type": "string" },
+        "targetAudience": { "type": "string" },
+        "imageUrl": { "type": "string" }
+      },
+      "required": ["id", "title", "description", "area", "benefits", "duration", "targetAudience"]
+    },
+    "ProgrammeApplication": {
+      "title": "ProgrammeApplication",
+      "description": "Applications to programmes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "programmeId": { "type": "string" },
+        "programmeTitle": { "type": "string" },
+        "fullName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "gender": { "type": "string" },
+        "ageGroup": { "type": "string" },
+        "occupation": { "type": "string" },
+        "purpose": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "programmeId", "programmeTitle", "fullName", "email", "phone", "status", "createdAt"]
+    },
+    "ScholarshipApplication": {
+      "title": "ScholarshipApplication",
+      "description": "Scholarship applications",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fullName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "institution": { "type": "string" },
+        "courseOfStudy": { "type": "string" },
+        "level": { "type": "string" },
+        "gpa": { "type": "string" },
+        "financialNeedReason": { "type": "string" },
+        "essayUrl": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "fullName", "email", "phone", "institution", "courseOfStudy", "level", "gpa", "financialNeedReason", "status", "createdAt"]
+    },
+    "CounsellingBooking": {
+      "title": "CounsellingBooking",
+      "description": "Counselling/coaching booking details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fullName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "serviceType": { "type": "string" },
+        "preferredDate": { "type": "string" },
+        "preferredTime": { "type": "string" },
+        "message": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "fullName", "email", "phone", "serviceType", "preferredDate", "preferredTime", "status", "createdAt"]
+    },
+    "ContactMessage": {
+      "title": "ContactMessage",
+      "description": "Contact form submissions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fullName": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "subject": { "type": "string" },
+        "message": { "type": "string" },
+        "isRead": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "fullName", "email", "subject", "message", "isRead", "createdAt"]
+    },
+    "NewsletterSubscriber": {
+      "title": "NewsletterSubscriber",
+      "description": "Subscribers to newsletter",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "email": { "type": "string" },
+        "subscribedAt": { "type": "string" }
+      },
+      "required": ["id", "email", "subscribedAt"]
+    },
+    "BlogPost": {
+      "title": "BlogPost",
+      "description": "Blog posts and articles",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "slug": { "type": "string" },
+        "content": { "type": "string" },
+        "excerpt": { "type": "string" },
+        "author": { "type": "string" },
+        "category": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "publishedAt": { "type": "string" }
+      },
+      "required": ["id", "title", "slug", "content", "excerpt", "author", "category", "imageUrl", "publishedAt"]
+    },
+    "GalleryItem": {
+      "title": "GalleryItem",
+      "description": "Gallery images and events",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "date": { "type": "string" }
+      },
+      "required": ["id", "title", "description", "category", "imageUrl", "date"]
+    },
+    "Partner": {
+      "title": "Partner",
+      "description": "OYDEI partners and organizations",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "affiliation": { "type": "string" },
+        "imageUrl": { "type": "string" }
+      },
+      "required": ["id", "name", "role"]
+    },
+    "Testimonial": {
+      "title": "Testimonial",
+      "description": "User testimonials and ratings",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "content": { "type": "string" },
+        "rating": { "type": "number" },
+        "imageUrl": { "type": "string" }
+      },
+      "required": ["id", "name", "role", "content", "rating"]
+    },
+    "Donation": {
+      "title": "Donation",
+      "description": "Recorded donations and contributions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "donorName": { "type": "string" },
+        "donorEmail": { "type": "string" },
+        "amount": { "type": "number" },
+        "currency": { "type": "string" },
+        "purpose": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "donorName", "donorEmail", "amount", "currency", "purpose", "status", "createdAt"]
+    },
+    "Certificate": {
+      "title": "Certificate",
+      "description": "Verified certificates issued by OYDEI",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "certificateNumber": { "type": "string" },
+        "recipientName": { "type": "string" },
+        "programmeTitle": { "type": "string" },
+        "issueDate": { "type": "string" },
+        "grade": { "type": "string" },
+        "isValid": { "type": "boolean" }
+      },
+      "required": ["id", "certificateNumber", "recipientName", "programmeTitle", "issueDate", "isValid"]
+    },
+    "Event": {
+      "title": "Event",
+      "description": "OYDEI events details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "date": { "type": "string" },
+        "venue": { "type": "string" },
+        "description": { "type": "string" },
+        "theme": { "type": "string" },
+        "attendeesCount": { "type": "number" },
+        "imageUrl": { "type": "string" }
+      },
+      "required": ["id", "title", "date", "venue", "description"]
+    }
+  },
+  "firestore": {
+    "/programmes/{programmeId}": {
+      "schema": "Programme",
+      "description": "Operational programmes collection"
+    },
+    "/programme_applications/{applicationId}": {
+      "schema": "ProgrammeApplication",
+      "description": "User applications to programmes"
+    },
+    "/scholarship_applications/{applicationId}": {
+      "schema": "ScholarshipApplication",
+      "description": "User applications to scholarships"
+    },
+    "/counselling_bookings/{bookingId}": {
+      "schema": "CounsellingBooking",
+      "description": "User bookings for counselling sessions"
+    },
+    "/contact_messages/{messageId}": {
+      "schema": "ContactMessage",
+      "description": "Contact form submission messages"
+    },
+    "/newsletter_subscribers/{subscriberId}": {
+      "schema": "NewsletterSubscriber",
+      "description": "Subscribers list for email updates"
+    },
+    "/blog_posts/{postId}": {
+      "schema": "BlogPost",
+      "description": "Blog posts and articles"
+    },
+    "/gallery_items/{itemId}": {
+      "schema": "GalleryItem",
+      "description": "Gallery image items"
+    },
+    "/partners/{partnerId}": {
+      "schema": "Partner",
+      "description": "Oydeli partner institutions and companies"
+    },
+    "/testimonials/{testimonialId}": {
+      "schema": "Testimonial",
+      "description": "Student or client testimonials"
+    },
+    "/donations/{donationId}": {
+      "schema": "Donation",
+      "description": "Records of financial contributions"
+    },
+    "/certificates/{certificateId}": {
+      "schema": "Certificate",
+      "description": "Digitally signed certificates"
+    },
+    "/events/{eventId}": {
+      "schema": "Event",
+      "description": "Organizational events and workshops"
+    }
+  }
+}
