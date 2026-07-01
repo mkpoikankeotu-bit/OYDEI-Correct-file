@@ -1,0 +1,2 @@
+Triggering Vercel redeploy: no-op commit to prompt Vercel to build the latest main (contains recent fixes).
+Timestamp: 2026-07-01T17:??:??Z
